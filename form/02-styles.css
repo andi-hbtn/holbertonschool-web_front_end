@@ -131,8 +131,17 @@ button:-moz-focusring {
 }
 
 fieldset {
-	padding: .35em .75em .625em
+	padding: .35em .75em .625em;
 }
+
+fieldset {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	border: none;
+	padding: 0 0 2rem;
+}
+
 
 legend {
 	box-sizing: border-box;
