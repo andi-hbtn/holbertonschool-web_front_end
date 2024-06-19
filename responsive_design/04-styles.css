@@ -426,13 +426,13 @@ ul.row {
       ============================= */
 
 @media screen and (max-width: 767px) {
+	:root {
+		--nav-item-margin: 0;
+	}
+
 	.navbar-menu {
 		display: none;
 		flex: 1;
-	}
-
-	:root {
-		--nav-item-margin: 0;
 	}
 
 	.header .nav {
