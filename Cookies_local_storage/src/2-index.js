@@ -24,7 +24,6 @@ function showCookies(){
     document.body.appendChild(pTagHtml);
 }
 
-
 function getCookie(data){
     return Object.values(data).map((el,i)=>{
        return el.length < 1 ? "empty" : el
