@@ -354,9 +354,9 @@ a:active {
 /* Helpers
       ============================= */
 
-.card-image>img {
-	width: 100% !important;
-	height: auto !important;
+main img {
+	width: 100%;
+	height: auto;
 }
 
 /* main>section>div>div>ul>li>article>div {} */
