@@ -1,25 +1,16 @@
-import { render, screen } from "@testing-library/react";
-import Header from "./Header";
+import { render, screen } from '@testing-library/react';
+import Header from './Header';
 
-describe("Header component", () => {
-    test("renders the School Dashboard heading", () => {
+describe('Header Component', () => {
+    test('renders the Holberton logo', () => {
         render(<Header />);
-
-        const heading = screen.getByRole("heading", {
-            level: 1,
-            name: /school dashboard/i,
-        });
-
-        expect(heading).toBeInTheDocument();
+        const logo = screen.getByAltText(/holberton logo/i);
+        expect(logo).toBeInTheDocument();
     });
 
-    test("renders the Holberton logo image", () => {
+    test('renders heading h1 with correct text', () => {
         render(<Header />);
-
-        const logo = screen.getByRole("img", {
-            name: /holberton logo/i,
-        });
-
-        expect(logo).toBeInTheDocument();
+        const heading = screen.getByRole('heading', { level: 1 });
+        expect(heading).toHaveTextContent('School dashboard');
     });
 });

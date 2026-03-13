@@ -1,30 +1,32 @@
-import { render, screen } from "@testing-library/react";
-import Login from "./Login";
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import Login from './Login';
 
-describe("Login component", () => {
-
-    test("renders the login text", () => {
+describe('Login Component', () => {
+    beforeEach(() => {
         render(<Login />);
-
-        const loginText = screen.getByText(/login to access the full dashboard/i);
-        expect(loginText).toBeInTheDocument();
     });
 
-    test("renders email and password inputs", () => {
-        render(<Login />);
+    test('renders 2 labels, 2 inputs and 1 button', () => {
+        const labels = screen.getAllByRole('label');
+        const inputs = screen.getAllByRole('textbox');
+        const passwordInputs = screen.getAllByLabelText(/password/i);
+        const button = screen.getByRole('button');
 
-        const emailInput = screen.getByLabelText(/email/i);
-        const passwordInput = screen.getByLabelText(/password/i);
-
-        expect(emailInput).toBeInTheDocument();
-        expect(passwordInput).toBeInTheDocument();
-    });
-
-    test("renders the Ok button", () => {
-        render(<Login />);
-
-        const button = screen.getByRole("button", { name: /ok/i });
+        expect(labels.length).toBe(2);
+        expect(inputs.length + passwordInputs.length).toBe(2);
         expect(button).toBeInTheDocument();
     });
 
+    test('inputs focus when clicking on related labels', async () => {
+        const user = userEvent.setup();
+        const emailInput = screen.getByLabelText(/email/i);
+        const passwordInput = screen.getByLabelText(/password/i);
+
+        await user.click(screen.getByText(/email/i));
+        expect(emailInput).toHaveFocus();
+
+        await user.click(screen.getByText(/password/i));
+        expect(passwordInput).toHaveFocus();
+    });
 });
