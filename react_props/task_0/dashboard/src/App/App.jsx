@@ -8,7 +8,9 @@ function App() {
 
   return (
     <Fragment>
-      <Notifications />
+      <div className="notifications">
+        <Notifications />
+      </div>
       <Header />
       <div className='App-body'>
         <Login />

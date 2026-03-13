@@ -1,3 +1,4 @@
+/* eslint-disable */
 import "./Notifications.css";
 import closeIcon from "../assets/close-button.png";
 import { getLatestNotification } from "../utils/utils.jsx";

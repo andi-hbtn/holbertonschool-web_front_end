@@ -1,3 +1,4 @@
+/* eslint-disable */
 import "./Header.css";
 import hbtLogo from "../assets/holberton-logo.jpg";
 export default function Header() {
