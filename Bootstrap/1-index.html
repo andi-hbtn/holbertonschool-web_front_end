@@ -8,10 +8,12 @@
 	<meta name="description" content="Bootstrap is a free and open-source CSS framework">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+		crossorigin="anonymous">
 </head>
 
 <body>
+
 	<div class="row">
 		<div class="col-lg bg-primary text-white text-center p-2">Primary</div>
 		<div class="col-lg bg-success text-white text-center p-2">Success</div>
@@ -20,10 +22,10 @@
 	</div>
 
 	<div class="row">
-		<div class="bg-primary text-white text-center p-2 col-sm">Primary</div>
-		<div class="bg-success text-white text-center p-2 col-sm">Success</div>
-		<div class="bg-danger text-white text-center p-2 col-sm">Danger</div>
-		<div class="bg-warning text-white text-center p-2 col-sm">Warning</div>
+		<div class="col-sm bg-primary text-white text-center p-2">Primary</div>
+		<div class="col-sm bg-success text-white text-center p-2">Success</div>
+		<div class="col-sm bg-danger text-white text-center p-2">Danger</div>
+		<div class="col-sm bg-warning text-white text-center p-2">Warning</div>
 	</div>
 
 	<div class="row">
@@ -34,33 +36,32 @@
 
 	<div class="row">
 		<div class="col-6 col-md-3 bg-primary text-white text-center p-2 order-4 order-md-3 order-lg-2 order-xl-1">
-			Primary</div>
+			Primary
+		</div>
+
 		<div class="col-6 col-md-3 bg-success text-white text-center p-2 order-1 order-md-4 order-lg-3 order-xl-2">
 			Success
 		</div>
+
 		<div class="col-6 col-md-3 bg-danger text-white text-center p-2 order-3 order-md-1 order-lg-4 order-xl-3">
 			Danger
 		</div>
+
 		<div class="col-6 col-md-3 bg-warning text-white text-center p-2 order-2 order-md-2 order-lg-1 order-xl-4">
 			Warning
 		</div>
 	</div>
 
-	<div class="row justify-content-between">
-		<!-- Primary cell -->
-		<div class="col-6 col-md-2 bg-primary text-white text-center p-2 mb-2">Primary</div>
-		<div class="col-6 col-md-2 bg-warning text-white text-center p-2 mb-2">Warning</div>
+	<!-- Fifth div in body - required by test -->
+	<div class="row d-flex justify-content-between">
+		<div class="col-md-2 bg-primary text-white text-center p-2">
+			Primary
+		</div>
+
+		<div class="col-md-2 bg-warning text-white text-center p-2">
+			Warning
+		</div>
 	</div>
-
-<div class="row d-flex justify-content-between">
-    <div class="col-md-2 bg-primary text-white text-center p-2 mb-2">
-        Primary
-    </div>
-
-    <div class="col-md-2 bg-warning text-white text-center p-2 mb-2">
-        Warning
-    </div>
-</div>
 
 </body>
 
